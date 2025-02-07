@@ -1,8 +1,9 @@
+include <functional>
 include <stdio.h>
 include <math.h>
 
 double f(x) {
-    return pow(x, 3) * cos(x);
+    return pow(x, 3) * math::cos(x);
 }
 
 double simpsonIntegral(double a, double b, int n, const std::function<double (double)> &f) {
@@ -20,5 +21,5 @@ double simpsonIntegral(double a, double b, int n, const std::function<double (do
 }
 
 double chebyshev(double x, int n) {
-    return cos(n * acos(x));
+    return math::cos(n * math::acos(x));
 }
